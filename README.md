@@ -44,8 +44,11 @@ Will gzip all `*.js` files in folder `source` and output them to the `dist` fold
 
 ### Code example
 ```javascript
-const gzib = require('gzib');
-gzip(['source/**/*.js'], 'dist');
+const gzip = require('gzip-lib');
+gzip({
+  patterns: ['source/**/*.js'],
+  outputDir: 'dist',
+});
 ```
 Will gzip all `*.js` files in folder `source` and its sub-folders and output them to the `dist` folder with saving file paths relative to glob base, e.g.
 
